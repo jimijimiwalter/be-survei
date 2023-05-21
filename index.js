@@ -7,7 +7,7 @@ app.use(cors(
     {
         allowedHeaders: ["Authorization", "Access-Control-Allow-Origin", "Content-Type", "Access-Control-Allow-Credentials"],
         credentials: true,
-        origin: ['http://localhost:3000', 'https://localhost:3000']
+        origin: ['http://localhost:3000', 'https://localhost:3000', 'https://fe-survei-production.up.railway.app']
     }
 ))
 
