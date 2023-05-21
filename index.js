@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 
 app.get('/cookie', (req, res) => {
     res.cookie('Authorization', "asd", { maxAge: MAX_AGE_COOKIE, httpOnly: true , sameSite: 'none', secure: true});
+    res.cookie('userinfo', "blablabla", { maxAge: MAX_AGE_COOKIE });
     res.json({ "ok": 'Hello World! Cookie' })
 })
 
