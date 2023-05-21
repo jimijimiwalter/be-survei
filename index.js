@@ -18,6 +18,6 @@ app.get('/', (req, res) => {
     res.json({ "ok": 'Hello World!' })
 })
 
-app.listen(8081, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Example app listening on port 8081`)
 })
