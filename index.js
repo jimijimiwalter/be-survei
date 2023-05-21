@@ -14,8 +14,12 @@ app.use(cors(
 const MAX_AGE_COOKIE = 3 * 24 * 60 * 60 * 1000 // 3d same as jwt expired time
 
 app.get('/', (req, res) => {
-    res.cookie('Authorization', "asd", { maxAge: MAX_AGE_COOKIE, httpOnly: true });
     res.json({ "ok": 'Hello World!' })
+})
+
+app.get('/cookie', (req, res) => {
+    res.cookie('Authorization', "asd", { maxAge: MAX_AGE_COOKIE, httpOnly: true });
+    res.json({ "ok": 'Hello World! Cookie' })
 })
 
 app.listen(process.env.PORT, () => {
